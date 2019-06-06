@@ -9,14 +9,20 @@ mp3:
 cover:
 typora-root-url: ..
 ---
-
-
 用typora编辑*文字*，添加**图片**
 第二次修改 `hexo g`,`hexo deploy`
 
 ~~图片修改~~
 
 ==gaoliang==
+
+
+
+lkdsjf ldkfj ladksjf   alsfkdjl k
+
+
+
+
 
 :heart:
 
