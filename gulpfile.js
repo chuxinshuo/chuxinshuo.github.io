@@ -4,9 +4,6 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var htmlclean = require('gulp-htmlclean');
 
-// 获取 gulp-imagemin 模块
-var imagemin = require('gulp-imagemin')
-
 // 压缩 public 目录 css
 gulp.task('minify-css', function() {
     return gulp.src('./public/**/*.css')
