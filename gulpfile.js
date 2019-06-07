@@ -60,6 +60,6 @@ gulp.task('build', [
 ]);
 */
 //4.0版本
-gulp.task(''default', gulp.parallel('minify-html','minify-css'
+gulp.task('default', gulp.parallel('minify-html','minify-css','minify-js')
  //build the website
-));
+);
