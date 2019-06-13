@@ -6,11 +6,12 @@ cache:
   - node_modules
 before_install:
 - export TZ='Asia/Shanghai'
-#- npm install hexo -g
-#- npm install gulp --save
-#- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+
 install:
 - npm install hexo -g
+- npm install gulp --save
+- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+
 script:
 - hexo clean
 - hexo generate && gulp
