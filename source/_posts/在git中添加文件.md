@@ -4,10 +4,11 @@ categories:
   - []
 tags:
   - []
+typora-root-url: ..
+abbrlink: 919ad9bc
 date: 2019-06-04 16:36:05
 mp3:
 cover:
-typora-root-url: ..
 ---
 用typora编辑*文字*，添加**图片**
 第二次修改 `hexo g`,`hexo deploy`
