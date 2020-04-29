@@ -1,22 +1,20 @@
 language: node_js
 node_js: stable
-# cache:
-#  apt: true
-#  directories:
-#  - node_modules
+cache:
+  apt: true
+  directories:
+  - node_modules
 before_install:
 - export TZ='Asia/Shanghai'
 
 install:
 - npm install hexo -g
 - npm install gulp --save
-#- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
 
 script:
 - hexo clean
-#- hexo generate && gulp
-- hexo generate 
-
+- hexo generate && gulp
 after_script:
   - git clone https://${GH_REF} .deploy_git  # GH_REF是最下面配置的仓库地址
   - cd .deploy_git
@@ -31,7 +29,7 @@ after_script:
   # Github Pages
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master 
   # Coding Pages
- # - git push --force --quiet "https://simyong:${CODING_TOKEN}@${CO_REF}" master:master
+  - git push --force --quiet "https://simyong:${CODING_TOKEN}@${CO_REF}" master:master
 
 branches:
   only:
@@ -42,4 +40,4 @@ env:
    # Github Pages
    - GH_REF: github.com/chuxinshuo/chuxinshuo.github.io.git  
    # Coding Pages
-   #- CO_REF: git.dev.tencent.com/simyong/simyong.coding.me.git
+   - CO_REF: git.dev.tencent.com/simyong/simyong.coding.me.git
