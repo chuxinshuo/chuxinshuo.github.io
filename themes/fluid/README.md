@@ -19,13 +19,12 @@
 <p align="center">
   <span>文档：</span>
   <a href="https://hexo.fluid-dev.com/docs/">用户手册</a>&nbsp&nbsp&nbsp&nbsp
-  <a href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/Changelog.md">更新日志</a>&nbsp&nbsp&nbsp&nbsp
   <a href="https://hexo.io/zh-cn/docs/front-matter">文章配置</a>
 </p>
 
 <p align="center">
   <span>预览：</span>
-  <a href="https://rook1e.com">Rook1e's blog</a>&nbsp&nbsp&nbsp&nbsp
+  <a href="https://hexo.fluid-dev.com/">demo</a>&nbsp&nbsp&nbsp&nbsp
   <a href="https://zkqiang.cn">zkqiang's blog</a>
 </p>
 

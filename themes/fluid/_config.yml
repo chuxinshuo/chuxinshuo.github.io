@@ -59,8 +59,8 @@ font:  # 主题字体配置
   font_family:                      # 全局字体
   code_font_size: 85%               # 代码的字号
 
-custom_js:   # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js，支持列表
-custom_css:   # 指定自定义 css 文件路径，路径是相对 source 目录，如 /css/custom.css，支持列表
+custom_js:   # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js，支持列表
+custom_css:   # 指定自定义 css 文件路径，路径是相对 source 目录，如 /css/custom.css 同上，支持列表
 custom_html: ''  # 自定义底部 HTML 内容（位于 footer 上方），也可用于外部引入 js css 这些操作，注意不要和 post.custom 配置冲突
 
 web_analytics:  # 网页访问统计
@@ -100,7 +100,7 @@ version:  # 版本相关
 # Header
 #---------------------------
 navbar:
-  blog_title:  # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  blog_title: Fluid # 导航栏左侧的标题，为空则按 hexo config.title 显示
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
@@ -155,7 +155,7 @@ index:
   post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
   slogan:  # 首页副标题的独立设置
     enable: true  # 为 false 则不显示任何内容
-    text:  # 为空则按 hexo config.subtitle 显示
+    text: 'An elegant Material-Design theme for Hexo'  # 为空则按 hexo config.subtitle 显示
   auto_excerpt:
     enable: true
   post_url_target: _self  # available: _blank | _self
@@ -168,7 +168,7 @@ index:
 # Custom Page
 page:
   banner_img: /img/default.png
-  banner_img_height: 70  # available: 0 - 100
+  banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
 
 #---------------------------
@@ -182,7 +182,7 @@ post:  # 部分配置同时控制自定义页面，注意备注
   meta:  # 文章标题下方的信息
     date:  # 文章日期
       enable: true
-      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
+      format: "LL a"  # 格式参照 ISO-8601 日期格式化，可参照 http://momentjs.cn/docs/#/parsing/string-format/
     wordcount:  # 字数统计
       enable: true
       format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
@@ -193,9 +193,10 @@ post:  # 部分配置同时控制自定义页面，注意备注
     views:  # 阅读次数，统计基于不蒜子  *不蒜子近期连接不稳定，谨慎开启
       enable: false
       format: "{} 次"
-  updated:
+  updated:  # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
     enable: false
-    content: 本文最后更新于：
+    content: 本文最后更新于：  # 描述文字
+    relative: false  # 是否使用相对时间表示，比如："3 天前"
   toc:  # 文章右侧目录
     enable: true
     headingSelector: h1,h2,h3,h4,h5,h6
@@ -208,9 +209,6 @@ post:  # 部分配置同时控制自定义页面，注意备注
   custom:  # 文章底部自定义内容
     enable: false
     content: '<img src="https://octodex.github.com/images/jetpacktocat.png" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">' # 自定义区域，支持 HTML，可自行插入赞赏码、公众号二维码等内容
-  comments:  # 评论
-    enable: false  # 开启评论
-    type: disqus  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
   image_zoom:  # 文章图片可点击放大
     enable: true  # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `image_zoom: true`，并且图片使用该格式插入：<img src="..." zoom />
   math:  # 数学公式，开启之前需要更换 Markdown 渲染器，否则复杂公式会有兼容问题，具体请见：https://hexo.fluid-dev.com/docs/guide/##latex-数学公式
@@ -221,13 +219,17 @@ post:  # 部分配置同时控制自定义页面，注意备注
     enable: false  # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `mermaid: true`
     specific: false  # 开启后，只有在文章 Front-matter 里指定 `mermaid: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
     options: { theme: 'default' }  # 接口选项，具体可见：http://mermaid-js.github.io/mermaid/#/mermaidAPI
+  comments:  # 评论
+    enable: false  # 开启评论
+    type: disqus  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
+
 
 #---------------------------
 # 评论
 # Comments
 #---------------------------
 
-# 开启评论在上方的 post.comments 配置
+# 开启评论需要先在上方 post.comments.enable: true
 
 # utterances
 # You can install utterances with https://utteranc.es/ and generate your configuration
@@ -275,7 +277,6 @@ valine:
   highlight: false # 代码高亮
   recordIP: false # 是否记录评论者IP
   serverURLs: # 该配置适用于国内自定义域名用户, 海外版本会自动检测(无需手动填写)
-  mathJax: false # 是否启用MathJax
 
 # 畅言
 # http://changyan.kuaizhan.com/
@@ -295,7 +296,7 @@ livere:
 #---------------------------
 archive:
   banner_img: /img/default.png
-  banner_img_height: 80  # available: 0 - 100
+  banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
 
@@ -305,7 +306,7 @@ archive:
 #---------------------------
 category:
   banner_img: /img/default.png
-  banner_img_height: 80  # available: 0 - 100
+  banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
 
@@ -330,9 +331,9 @@ tag:
 # 关于页
 # About Page
 #---------------------------
-about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
+about:  # 关于页需要手动创建，具体请见：https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E9%A1%B5
   banner_img: /img/default.png
-  banner_img_height: 80  # available: 0 - 100
+  banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
   avatar: /img/avatar.png # 头像
@@ -340,7 +341,7 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
   introduce: info / info / info # 支持 HTML
   icons: # 更多图标可从 https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/iconfont.png 查找，class 代表图标的 css class
     - { class: 'iconfont icon-github-fill', link: 'https://github.com' }
-    - { class: 'iconfont icon-douban-fill', link: 'https://github.com' }
+    - { class: 'iconfont icon-douban-fill', link: 'https://douban.com' }
     - { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }  # 添加 qrcode 后，点击不再跳转，而是悬浮二维码，需要指定 image
 
 
@@ -350,7 +351,7 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
 #---------------------------
 page404:
   banner_img: /img/default.png
-  banner_img_height: 100  # available: 0 - 100
+  banner_img_height: 85  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle: 'Page not found'  # 打字机内容
 
@@ -361,7 +362,7 @@ page404:
 #---------------------------
 links:
   banner_img: /img/default.png
-  banner_img_height: 80  # available: 0 - 100
+  banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
   items:  # intro 与 image 可省略
@@ -378,8 +379,8 @@ links:
       image: '/img/favicon.png'
     }
     - {
-      title: 'Fluid Changelog',
-      intro: '主题更新日志',
-      link: 'https://github.com/fluid-dev/hexo-theme-fluid/blob/master/Changelog.md',
+      title: 'Fluid Example',
+      intro: '主题操作示例',
+      link: 'https://hexo.fluid-dev.com/docs/example/',
       image: '/img/favicon.png'
     }
