@@ -1,43 +1,37 @@
-language: node_js
-node_js: stable
-# cache:
-#  apt: true
-#  directories:
-#  - node_modules
-before_install:
-- export TZ='Asia/Shanghai'
+language: node_js # 设置语言
+  
+  node_js: stable # 设置相应版本
+  
+  cache:
+      apt: true
+      directories:
+          - node_modules # 设置缓存，传说会在构建的时候快一些
+  
+  before_install:
+      - npm install hexo-cli -g
+      - npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+  install:
+      - npm install # 安装hexo及插件
 
-install:
-- npm install hexo -g
-- npm install gulp --save
-- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+  
+  script:
+      - hexo clean # 清除
+      - hexo generate && gulp
+  
+  after_script:
+      - git clone ${GH_REF} pub_web # 将发布服务的仓库clone下来，
+      - cp -rf public/* pub_web/ # 将源博客仓库目录下的public文件夹下的文件复制到发布服务的仓库中
+      - cd pub_web # 进入到git仓库
+      - git config user.name "username"
+      - git config user.email "username@mail.com"
+      - git add .
+      - git commit -am "Travis CI Auto Builder :$(date '+%Y-%m-%d %H:%M:%S' -d '+8 hour')" # 零时区，+8小时
+      - git push origin master 
+  branches:
+      only:
+          - source #只监测master分支
+  env:
+      global:
+          - GH_REF: https://chuxinshuo:${GITHUB_TOKEN}@github.com/chuxinshuo/chuxinshuo.github.io #设置GH_REF
 
-script:
-- hexo clean
-- hexo generate && gulp
-after_script:
-  - git clone https://${GH_REF} .deploy_git  # GH_REF是最下面配置的仓库地址
-  - cd .deploy_git
-  - git checkout master
-  - cd ../
-  - mv .deploy_git/.git/ ./public/   # 这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
-  - cd ./public
-  - git config user.name "chuxinshuo"
-  - git config user.email "kafeiyucha@126.com"
-  - git add .
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
-  # Github Pages
-  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master 
-  # Coding Pages
-  - git push --force --quiet "https://simyong:${CODING_TOKEN}@${CO_REF}" master:master
 
-branches:
-  only:
-  - source  
-
-env:
- global:
-   # Github Pages
-   - GH_REF: github.com/chuxinshuo/chuxinshuo.github.io.git  
-   # Coding Pages
-   - CO_REF: git.dev.tencent.com/simyong/simyong.coding.me.git
