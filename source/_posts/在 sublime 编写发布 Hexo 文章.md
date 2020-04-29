@@ -14,3 +14,6 @@ cover:
 1. 首先要有自动部署
 2. 用 sublime 编写
 3. 本文为 Mac 环境
+
+
+xiugai
