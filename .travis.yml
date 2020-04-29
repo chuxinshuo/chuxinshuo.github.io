@@ -10,11 +10,12 @@ before_install:
 install:
 - npm install hexo -g
 - npm install gulp --save
-- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+#- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
 
 script:
 - hexo clean
-- hexo generate && gulp
+#- hexo generate && gulp
+- hexo generate 
 
 after_script:
   - git clone https://${GH_REF} .deploy_git  # GH_REF是最下面配置的仓库地址
