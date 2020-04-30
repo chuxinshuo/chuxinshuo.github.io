@@ -546,10 +546,10 @@ a.beian-police img {
   color: white;
 }
 .top-nav-collapse {
-  background-color: #2f4154;
+  background-color: #222222;
 }
 .navbar-col-show {
-  background-color: #2f4154;
+  background-color: #222222;
 }
 @media (max-width: 767px) {
   .navbar {
