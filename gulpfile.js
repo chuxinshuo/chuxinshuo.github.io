@@ -31,13 +31,11 @@ gulp.task('minify-html', function() {
         .pipe(gulp.dest('./public'))
 });
 // 压缩 public/js 目录 js
-
-gulp.task('minify-js', function() {
-    return gulp.src('./public/**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./public'));
-});
-
+//gulp.task('minify-js', function() {
+//    return gulp.src('./public/**/*.js')
+//        .pipe(uglify())
+//        .pipe(gulp.dest('./public'));
+//});
 
 // 压缩图片任务
 // 在命令行输入 gulp images 启动此任务
@@ -60,6 +58,8 @@ gulp.task('build', [
 ]);
 */
 //4.0版本
-gulp.task('default', gulp.parallel('minify-html','minify-css','minify-js')
+//gulp.task('default', gulp.parallel('minify-html','minify-css','minify-js')
+ 
+ gulp.task('default', gulp.parallel('minify-html','minify-css')
  //build the website
 );
