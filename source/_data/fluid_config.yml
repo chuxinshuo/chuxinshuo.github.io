@@ -43,14 +43,14 @@ fun_features: # 一些好玩的功能
 
 color:  # 主题颜色配置，不一定能每一处都生效，可能会被局部样式覆盖，这种情况建议用自定义 css 解决。配色可以在这获得启发： https://www.webdesignrankings.com/resources/lolcolors/
   body_bg_color: "#eee"             # body 背景色
-  navbar_bg_color: "#222222"        # 顶部菜单背景色
+  navbar_bg_color: "#3c4858"        # 顶部菜单背景色
   navbar_text_color: "white"        # 顶部菜单字体色
   text_color: "#3c4858"             # 全局字体色
   sec_text_color: "#718096"         # 全局次级字体色（摘要、简介等位置）
   post_text_color: "#2c3e50"        # 文章正文字体色
   post_heading_color: "#1a202c"     # 文章标题标签字体色（h1 h2 h3...）
-  link_color: "#3c4858"             # 超链接字体色
-  link_hover_color: "#1abc9c"       # 超链接悬浮时字体色
+  link_color: "#519D9E"             # 超链接字体色
+  link_hover_color: "#58C9B9"       # 超链接悬浮时字体色
   link_hover_bg_color: "#ebedef"    # 超链接悬浮背景色
   board_color: "#fff"               # 主面板背景色
 
@@ -100,7 +100,7 @@ version:  # 版本相关
 # Header
 #---------------------------
 navbar:
-  blog_title: Fluid # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  blog_title: 牧心记 # 导航栏左侧的标题，为空则按 hexo config.title 显示
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
