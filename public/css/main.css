@@ -601,12 +601,6 @@ a.beian-police img {
   line-height: 1.5;
   border-radius: 3px;
   tab-size: 4;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-}
-.markdown-body pre code::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 .markdown-body pre code.mermaid > svg {
   min-width: 100%;
