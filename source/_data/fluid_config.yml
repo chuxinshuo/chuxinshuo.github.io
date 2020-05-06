@@ -11,9 +11,9 @@
 # 全局
 # Site
 #---------------------------
-favicon: /img/favicon.png # 网站标签页的 icon
+favicon: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-06/favicon.png # 网站标签页的 icon
 
-apple_touch_icon: /img/apple-touch-icon.png # 用于苹果设备的 icon
+apple_touch_icon: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-06/favicon.png # 用于苹果设备的 icon
 
 title_join_string: ' - '  # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 
@@ -42,15 +42,15 @@ fun_features: # 一些好玩的功能
     style: values # 目前设置两个值：values（价值观词汇） | love（爱心）
 
 color:  # 主题颜色配置，不一定能每一处都生效，可能会被局部样式覆盖，这种情况建议用自定义 css 解决。配色可以在这获得启发： https://www.webdesignrankings.com/resources/lolcolors/
-  body_bg_color: "#eee"             # body 背景色
-  navbar_bg_color: "#3c4858"        # 顶部菜单背景色
+  body_bg_color: "#F2F7F4"             # body 背景色
+  navbar_bg_color: "rgba(255,255,255,0.94)"        # 顶部菜单背景色
   navbar_text_color: "white"        # 顶部菜单字体色
   text_color: "#3c4858"             # 全局字体色
   sec_text_color: "#718096"         # 全局次级字体色（摘要、简介等位置）
   post_text_color: "#2c3e50"        # 文章正文字体色
   post_heading_color: "#1a202c"     # 文章标题标签字体色（h1 h2 h3...）
-  link_color: "#519D9E"             # 超链接字体色
-  link_hover_color: "#58C9B9"       # 超链接悬浮时字体色
+  link_color: "#477258"             # 超链接字体色
+  link_hover_color: "#477258"       # 超链接悬浮时字体色
   link_hover_bg_color: "#ebedef"    # 超链接悬浮背景色
   board_color: "#fff"               # 主面板背景色
 
@@ -149,7 +149,7 @@ scroll_top_arrow:  # 向顶部滚动的箭头
 # Index Page
 #---------------------------
 index:
-  banner_img: /img/default.png  # 首页 Banner 头图，以下相同
+  banner_img: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-04/main-visual_pc.jpg  # 首页 Banner 头图，以下相同
   banner_img_height: 100  # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3  # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
@@ -167,7 +167,7 @@ index:
 # 通过 hexo new page 命令创建的页面
 # Custom Page
 page:
-  banner_img: /img/default.png
+  banner_img: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-04/main-visual_pc.jpg
   banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
 
@@ -176,7 +176,7 @@ page:
 # Post Page
 #---------------------------
 post:  # 部分配置同时控制自定义页面，注意备注
-  banner_img: /img/default.png
+  banner_img: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-04/main-visual_pc.jpg
   banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   meta:  # 文章标题下方的信息
@@ -184,10 +184,10 @@ post:  # 部分配置同时控制自定义页面，注意备注
       enable: true
       format: "LL a"  # 格式参照 ISO-8601 日期格式化，可参照 http://momentjs.cn/docs/#/parsing/string-format/
     wordcount:  # 字数统计
-      enable: true
+      enable: false
       format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
     min2read:  # 阅读时间
-      enable: true
+      enable: false
       format: "{} 分钟"
       words: 100  # 每分钟阅读多少字，如果是技术文章，建议降低
     views:  # 阅读次数，统计基于不蒜子  *不蒜子近期连接不稳定，谨慎开启
