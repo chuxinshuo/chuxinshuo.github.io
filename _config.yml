@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 初心说
+title: 牧心记
 subtitle:
 description:
 keywords:
-author: chuxin.talk
+author: 
 language: zh-CN 
 timezone:
 
@@ -90,8 +90,8 @@ deploy:
   branch: master
  
 # hexo-admin
-admin:
-    deployCommand: './hexo-publish.sh'
+#admin:
+#    deployCommand: './hexo-publish.sh'
     
 # douban
 douban:
@@ -106,9 +106,9 @@ douban:
   timeout: 10000
 
 # translate-title
-translate_title:
-  translate_way: google  # google,youdao,baidu_with_appid,baidu_no_appid
-  is_need_proxy: false     # true | false
+#translate_title:
+#  translate_way: google  # google,youdao,baidu_with_appid,baidu_no_appid
+#  is_need_proxy: false     # true | false
   # proxy_url: http://localhost:50018 # Your proxy_url
   # youdao_api_key: '' # Your youdao_api_key
   # youdao_keyfrom: xxxx-blog # Your youdao_keyfrom

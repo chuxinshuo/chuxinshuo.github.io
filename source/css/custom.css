@@ -51,9 +51,7 @@ span#subtitle,span.typed-cursor{
     font-weight: 300;
     color: #477258;
 }
-.icon-home-fill:before,.icon-archive-fill:before,
-.icon-category-fill:before,.icon-tags-fill:before,
-.icon-user-fill:before,.icon-date-fill:before,.icon-date:before{
+.icon-date-fill:before,.icon-date:before{
     content: "";
 }
 scroll-down-bar i {
