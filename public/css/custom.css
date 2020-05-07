@@ -25,7 +25,7 @@ body a{
     font-weight: 400
 }
 /*导航*/
-.navbar.navbar-dark .navbar-nav .nav-item .nav-link{
+.navbar-custom a,.navbar.navbar-dark .navbar-nav .nav-item .nav-link{
     color: #111;
      font-weight: 300 !important
 }
@@ -55,6 +55,9 @@ span#subtitle,span.typed-cursor{
 .icon-category-fill:before,.icon-tags-fill:before,
 .icon-user-fill:before,.icon-date-fill:before,.icon-date:before{
     content: "";
+}
+scroll-down-bar i {
+    font-size: 1rem;
 }
 /*首页文章*/
 .index-header {

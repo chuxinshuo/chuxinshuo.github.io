@@ -11,18 +11,18 @@ header,
   overflow-wrap: break-word;
 }
 body {
-  background-color: #eee;
+  background-color: #F2F7F4;
   color: #3c4858;
 }
 body a {
-  color: #519D9E;
+  color: #477258;
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 body a:hover {
-  color: #58C9B9;
+  color: #477258;
   text-decoration: none;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -546,10 +546,10 @@ a.beian-police img {
   color: white;
 }
 .top-nav-collapse {
-  background-color: #3c4858;
+  background-color: rgba(255,255,255,0.94);
 }
 .navbar-col-show {
-  background-color: #3c4858;
+  background-color: rgba(255,255,255,0.94);
 }
 @media (max-width: 767px) {
   .navbar {
@@ -1009,7 +1009,7 @@ h6::before {
 }
 .tocbot-active-link {
   font-weight: bold;
-  color: #58C9B9;
+  color: #477258;
 }
 .tocbot-is-collapsed {
   max-height: 0;
@@ -1326,7 +1326,7 @@ mjx-container svg:focus {
   padding: 0.5rem;
 }
 .tagcloud a:hover {
-  color: #58C9B9 !important;
+  color: #477258 !important;
 }
 .links .card {
   box-shadow: none;
