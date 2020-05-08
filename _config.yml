@@ -101,7 +101,7 @@ douban:
     title: 'This is my book title'
     quote: 'This is my book quote'
   movie:
-    title: 'This is my movie title'
+    title: '梦想要根植于现实'
     quote: 'This is my movie quote'
   timeout: 10000
 
