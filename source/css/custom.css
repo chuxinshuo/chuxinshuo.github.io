@@ -100,3 +100,100 @@ scroll-down-bar i {
 .markdown-body p > img, .markdown-body p > a > img {
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.18), 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
+
+/*豆瓣*/
+.bmdb-list, .bmdb-list *, .bmdb-list:after, .bmdb-list :after, .bmdb-list:before, .bmdb-list :before, .bmdb-loader, .bmdb-loader *, .bmdb-loader:after, .bmdb-loader :after, .bmdb-loader:before, .bmdb-loader :before {
+    box-sizing: border-box;
+}
+.bmdb-li, .bmdb-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bmdb-ul {
+    margin-left: -2%;
+    margin-right: -2%;
+    margin-bottom: 0;
+    padding: 0;
+    background: none;
+    line-height: 100%;
+}
+.bmdb-li {
+    list-style: none;
+    float: left;
+    width: 16%;
+    display: block;
+    font-size: 13px;
+    padding: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+}
+.bmdb-link, .bmdb-link:focus, .bmdb-link:hover {
+    text-decoration: none;
+    box-shadow: none;
+}
+.bmdb-link {
+    color: #444;
+}
+.bmdb-cover {
+    position: relative;
+    min-height: 87px;
+    overflow: hidden;
+    background-color: #ececec;
+}
+.bmdb-cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+.bmdb-info {
+    height: 45px;
+    overflow: hidden;
+}
+.bmdb-title {
+    display: -webkit-box;
+    font-size: 13px;
+    padding: 10px 0 0;
+    color: #494949;
+    line-height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.bmdb-cover:before {
+    content: "";
+    display: block;
+    padding-top: 143%;
+}
+
+.bmdb-ul:after, .bmdb-ul:before {
+    content: "";
+    display: table;
+}
+.hexo-douban-pagination {
+    float: right;
+    margin: 10px auto 15px;
+    width: 100%;
+}
+.hexo-douban-meta {
+    padding-top: 3px;
+    width: 6em;
+    color: #f9c00c;
+    float:left;
+    margin-right: -6px;
+}
+.hexo-douban-comments {
+    padding-top: 3px;
+}
+@media screen and (max-width: 768px){
+.bmdb-li {
+    width: 29.33%;
+}
+}

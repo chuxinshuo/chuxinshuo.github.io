@@ -96,7 +96,7 @@ deploy:
 # douban
 douban:
   user: 61194601
-  builtin: false
+  builtin: true
   book:
     title: 'This is my book title'
     quote: 'This is my book quote'

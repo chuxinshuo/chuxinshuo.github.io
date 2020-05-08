@@ -11,9 +11,9 @@
 # 全局
 # Site
 #---------------------------
-favicon: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-07/favicon.png # 网站标签页的 icon
+favicon: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-08/favicon.png # 网站标签页的 icon
 
-apple_touch_icon: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-07/favicon.png # 用于苹果设备的 icon
+apple_touch_icon: https://cdn.jsdelivr.net/gh/chuxinshuo/static@master/uPic/2020/05-08/favicon.png # 用于苹果设备的 icon
 
 title_join_string: ' - '  # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 
@@ -103,9 +103,9 @@ navbar:
   blog_title: 牧心记 # 导航栏左侧的标题，为空则按 hexo config.title 显示
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/'}
-    - { key: 'archive', link: '/archives/' }
     - { key: '读书', link: '/books/' }
-    - { key: '电影', link: '/movies/' }
+    - { key: '电影', link: '/movies/' }    
+    - { key: 'archive', link: '/archives/' }
     - { key: 'category', link: '/categories/'}
     - { key: 'tag', link: '/tags/'}
     - { key: 'about', link: '/about/'}
