@@ -1,7 +1,7 @@
 language: node_js
 #node_js: stable
 node_js:
-  - "12"
+  - "13.6"
 
 cache:
   apt: true
@@ -12,8 +12,8 @@ before_install:
 
 install:
 - npm install hexo -g
-- npm install gulp --save
-- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
+#- npm install gulp --save
+#- npm install gulp-htmlclean gulp-htmlmin gulp-uglify gulp-minify-css --save
 
 script:
 - hexo clean
