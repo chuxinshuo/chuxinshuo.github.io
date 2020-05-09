@@ -101,7 +101,11 @@ douban:
     title: '阅读让人越来越低'
     quote: 'This is my book quote'
   movie:
+<<<<<<< HEAD
     title: '遇见另一个世界，遇见另一个心灵，遇见你自己'
+=======
+    title: '梦想要根植于现实'
+>>>>>>> 6d958cf0d6c51401e6a2e25cd2b909796e2bd42a
     quote: 'This is my movie quote'
   timeout: 10000
 
