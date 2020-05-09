@@ -192,16 +192,6 @@ scroll-down-bar i {
 .hexo-douban-comments {
     padding-top: 3px;
 }
-
-.hexo-douban-active:before {
-    content: "•";
-    color: #d33722;
-}
-.hexo-douban-active {
-    color: #477258 !important;
-    background: none !important;
-    
-}
 @media screen and (max-width: 768px){
 .bmdb-li {
     width: 29.33%;

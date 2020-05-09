@@ -98,10 +98,10 @@ douban:
   user: 61194601
   builtin: true
   book:
-    title: 'This is my book title'
+    title: '阅读让人越来越低'
     quote: 'This is my book quote'
   movie:
-    title: 'This is my movie title'
+    title: '遇见另一个世界，遇见另一个心灵，遇见你自己'
     quote: 'This is my movie quote'
   timeout: 10000
 
