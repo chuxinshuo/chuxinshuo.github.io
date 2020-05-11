@@ -184,10 +184,13 @@ scroll-down-bar i {
 }
 .hexo-douban-meta {
     padding-top: 3px;
-    width: 6em;
+    padding-right: 5px !important;
     color: #f9c00c;
     float:left;
-    margin-right: -6px;
+}
+.hexo-douban-tabs {
+    margin-bottom: 30px !important;
+    margin-top: -10px !important;
 }
 .hexo-douban-comments {
     padding-top: 3px;
